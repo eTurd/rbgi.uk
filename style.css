@@ -1,38 +1,79 @@
-/* Make all text white */
+/* =====================
+   COLOR OPTIONS
+===================== */
+:root {
+  --bg-color: #727272;           /* Background color */
+  --text-color: #fff;         /* Text color */
+  --nav-bg-color: #1d1a23;       /* Navbar background */
+  --nav-link-color: #fff;     /* Navbar text color */
+  --nav-link-hover: #9c3ae2;  /* Navbar hover color */
+}
+
+/* =====================
+   BODY & BACKGROUND
+===================== */
 body {
-  background-color: #000; /* optional black background to make white text pop */
-  color: white;
-  text-align: center;    /* center everything horizontally */
+  background-color: var(--bg-color);
+  background-image: url('Images/tile1.png'); /* tiled background */
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: auto;
+
+  color: var(--text-color);
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
-/* Giant heading */
+/* =====================
+   NAVBAR
+===================== */
+nav {
+  position: fixed;       /* stick to top */
+  top: 0;
+  width: 100%;
+  background-color: var(--nav-bg-color);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--nav-link-hover);
+}
+
+/* =====================
+   MAIN HEADING
+===================== */
 h1 {
-  font-size: 5em;       /* adjust size as needed */
-  margin-top: 50px;
+  font-size: 5em;
+  margin-top: 100px; /* space below navbar */
 }
 
-/* Logo image below heading */
+/* =====================
+   LOGO IMAGE
+===================== */
 .logo {
   margin-top: 30px;
-  max-width: 80%;       /* scale logo so it fits nicely on screen */
+  max-width: 80%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-body {
-  background-image: url('images/tile1.png'); /* path relative to CSS file */
-  background-repeat: repeat;                 /* tiles the image */
-  background-position: top left;
-  background-size: auto;                     /* keeps original size */
-  
-  color: white;      /* text color */
-  text-align: center; 
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
 }
