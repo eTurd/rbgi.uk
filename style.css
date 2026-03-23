@@ -1,0 +1,38 @@
+/* Make all text white */
+body {
+  background-color: #000; /* optional black background to make white text pop */
+  color: white;
+  text-align: center;    /* center everything horizontally */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Giant heading */
+h1 {
+  font-size: 5em;       /* adjust size as needed */
+  margin-top: 50px;
+}
+
+/* Logo image below heading */
+.logo {
+  margin-top: 30px;
+  max-width: 80%;       /* scale logo so it fits nicely on screen */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-image: url('images/tile1.png'); /* path relative to CSS file */
+  background-repeat: repeat;                 /* tiles the image */
+  background-position: top left;
+  background-size: auto;                     /* keeps original size */
+  
+  color: white;      /* text color */
+  text-align: center; 
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
